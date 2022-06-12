@@ -1,0 +1,36 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    {
+      "Ed25519VerificationKey2018": "https://w3id.org/security#Ed25519VerificationKey2018",
+      "publicKeyJwk": {
+        "@id": "https://w3id.org/security#publicKeyJwk",
+        "@type": "@json"
+      }
+    }
+  ],
+  "id": "did:web:k-toumura.github.io:didwebtest:acc-air",
+  "verificationMethod": [
+    {
+      "id": "did:web:k-toumura.github.io:didwebtest:acc-air#key1",
+      "type": "Ed25519VerificationKey2018",
+      "controller": "did:web:k-toumura.github.io:didwebtest:acc-air",
+      "publicKeyJwk": {
+        "kty": "OKP",
+        "crv": "Ed25519",
+        "x": "2hnCdMUYDgnNT7HM8W9Jx_pWi8nHmgfKA_it0pJ4ioY"
+      }
+    }
+  ],
+  "authentication": [
+    "did:web:k-toumura.github.io:didwebtest:acc-air#key1"
+  ],
+  "assertionMethod": [
+    "did:web:k-toumura.github.io:didwebtest:acc-air#key1"
+  ],
+  "service": [{
+    "id": "did:web:k-toumura.github.io:didwebtest:acc-air#td",
+    "type": "WotThingDescription",
+    "serviceEndpoint": "https://raw.githubusercontent.com/w3c/wot-testing/main/events/2022.03.Online/TD/hitachi-esp-idf/TDs/hitachi-acc-air.td.jsonld"
+  }]
+}
